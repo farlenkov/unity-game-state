@@ -1,0 +1,15 @@
+{
+  "name": "com.farlenkov.unity-game-state",
+  "displayName": "UNITY / GAME STATE",
+  "version": "1.0.0",
+  "unity": "2021.3",
+  "description": "Unity Game State",
+  "keywords": [
+    ""
+  ],
+  "type": "library",
+  "author": {
+    "name": "Mike Farlenkov",
+    "url": "https://farlenkov.com"
+  }
+}
