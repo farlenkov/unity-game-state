@@ -1,7 +1,7 @@
 {
   "name": "com.farlenkov.unity-game-state",
   "displayName": "UNITY / GAME STATE",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "unity": "2021.3",
   "description": "Unity Game State",
   "keywords": [

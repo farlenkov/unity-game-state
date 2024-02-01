@@ -10,7 +10,39 @@ namespace UnityQueueRegistry
 
     public class BaseQueue<TYPE> : List<TYPE>, IBaseQueue
     {
+        public void Each(Action<TYPE> callback)
+        {
+            var count = Count;
 
+            if (count == 0)
+                return;
+
+            for (var i = 0; i < count; i++)
+            {
+                var item = this[i];
+                callback(item);
+            }
+        }
+
+        public void Each(Func<TYPE, int, bool> callback)
+        {
+            var count = Count;
+
+            if (count == 0)
+                return;
+
+            for (var i = 0; i < count; i++)
+            {
+                var item = this[i];
+
+                if (callback(item, i))
+                {
+                    RemoveAt(i);
+                    count = Count;
+                    i--;
+                }
+            }
+        }
     }
 
     public abstract class BaseQueueRegistry
